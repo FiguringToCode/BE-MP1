@@ -257,7 +257,6 @@ app.get('/categories', async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error.message)
         res.status(500).json({message: "Failed to make GET call.", error.message})
     }
 })
@@ -274,7 +273,6 @@ app.get('/laptops', async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error.message)
         res.status(500).json({message: "Failed to make GET call.", error.message})
     }
 })
@@ -291,7 +289,6 @@ app.get('/smartphones', async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error.message)
         res.status(500).json({message: "Failed to make GET call.", error.message})
     }
 })
@@ -308,7 +305,6 @@ app.get('/wearables', async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error.message)
         res.status(500).json({message: "Failed to make GET call.", error.message})
     }
 })
@@ -325,7 +321,6 @@ app.get('/audiogadgets', async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error.message)
         res.status(500).json({message: "Failed to make GET call.", error.message})
     }
 })
@@ -338,12 +333,10 @@ app.get('/homeAppliances', async (req, res) => {
         if(homeAppliances.length !== 0){
             res.json(homeAppliances)
         } else {
-            console.log(error.message)
             res.status(404).json({message: "Home appliances not found", error.message})
         }
 
     } catch (error) {
-        console.log(error.message)
         res.status(500).json({message: "Failed to make GET call.", error.message})
     }
 })
@@ -352,7 +345,7 @@ app.get('/homeAppliances', async (req, res) => {
 
 
 
-const PORT=process.env.MONGODB
+const PORT=process.env.PORT
 app.listen(PORT, () => {
     console.log("Server connected to port", PORT)
 })
