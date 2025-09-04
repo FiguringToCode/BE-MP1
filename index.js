@@ -103,7 +103,7 @@ app.post('/categories', async (req, res) => {
         res.status(201).json({message: "Category data saved successfully.", category: savedCategory})
 
     } catch (error) {
-        res.status(500).json({error: "Failed to save categories data.", error})
+        res.status(500).json({error: "Failed to save categories data.", error: error.message})
     }
 })
 
@@ -116,7 +116,7 @@ app.post('/laptops', async (req, res) => {
         res.status(201).json({message: "Laptop data saved successfully.", laptop: savedLaptop})
 
     } catch (error) {
-        res.status(500).json({error: "Failed to save laptops data.", error})
+        res.status(500).json({error: "Failed to save laptops data.", error: error.message})
     }
 })
 
@@ -129,7 +129,7 @@ app.post('/smartphones', async (req, res) => {
         res.status(201).json({message: "Smartphone data saved successfully.", smartphones: savedSmartphone})
 
     } catch (error) {
-        res.status(500).json({error: "Failed to save smartphones data.", error})
+        res.status(500).json({error: "Failed to save smartphones data.", error: error.message})
     }
 })
 
@@ -142,7 +142,7 @@ app.post('/wearables', async (req, res) => {
         res.status(201).json({message: "Wearable data saved successfully.", wearables: savedWearables})
 
     } catch (error) {
-        res.status(500).json({error: "Failed to save wearables data.", error})
+        res.status(500).json({error: "Failed to save wearables data.", error: error.message})
     }
 })
 
@@ -155,7 +155,7 @@ app.post('/audiogadgets', async (req, res) => {
         res.status(201).json({message: "Audio gadgets data saved successfully.", audioGadgets: savedAudioGadgets})
 
     } catch (error) {
-        res.status(500).json({error: "Failed to save audioGadgets data.", error})
+        res.status(500).json({error: "Failed to save audioGadgets data.", error: error.message})
     }
 })
 
@@ -168,7 +168,7 @@ app.post('/homeAppliances', async (req, res) => {
         res.status(201).json({message: "Home Appliances data saved successfully.", homeAppliances: savedHomeAppliances})
 
     } catch (error) {
-        res.status(500).json({error: "Failed to save homeAppliances data.", error})
+        res.status(500).json({error: "Failed to save homeAppliances data.", error: error.message})
     }
 })
 
