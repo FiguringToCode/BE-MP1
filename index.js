@@ -253,11 +253,11 @@ app.get('/categories', async (req, res) => {
         if(categories.length !== 0){
             res.json(categories)
         } else {
-            res.status(404).json({message: "Categories not found", error.message})
+            res.status(404).json({message: "Categories not found", error: error.message})
         }
 
     } catch (error) {
-        res.status(500).json({message: "Failed to make GET call.", error.message})
+        res.status(500).json({message: "Failed to make GET call.", error: error.message})
     }
 })
 
@@ -269,11 +269,11 @@ app.get('/laptops', async (req, res) => {
         if(laptops.length !== 0){
             res.json(laptops)
         } else {
-            res.status(404).json({message: "Laptops not found", error.message})
+            res.status(404).json({message: "Laptops not found", error: error.message})
         }
 
     } catch (error) {
-        res.status(500).json({message: "Failed to make GET call.", error.message})
+        res.status(500).json({message: "Failed to make GET call.", error: error.message})
     }
 })
 
@@ -285,11 +285,11 @@ app.get('/smartphones', async (req, res) => {
         if(smartphones.length !== 0){
             res.json(smartphones)
         } else {
-            res.status(404).json({message: "Smartphones not found", error.message})
+            res.status(404).json({message: "Smartphones not found", error: error.message})
         }
 
     } catch (error) {
-        res.status(500).json({message: "Failed to make GET call.", error.message})
+        res.status(500).json({message: "Failed to make GET call.", error: error.message})
     }
 })
 
@@ -301,11 +301,11 @@ app.get('/wearables', async (req, res) => {
         if(wearables.length !== 0){
             res.json(wearables)
         } else {
-            res.status(404).json({message: "Wearables not found", error.message})
+            res.status(404).json({message: "Wearables not found", error: error.message})
         }
 
     } catch (error) {
-        res.status(500).json({message: "Failed to make GET call.", error.message})
+        res.status(500).json({message: "Failed to make GET call.", error: error.message})
     }
 })
 
@@ -317,11 +317,11 @@ app.get('/audiogadgets', async (req, res) => {
         if(audiogadgets.length !== 0){
             res.json(audiogadgets)
         } else {
-            res.status(404).json({message: "Audio gadgets not found", error.message})
+            res.status(404).json({message: "Audio gadgets not found", error: error.message})
         }
 
     } catch (error) {
-        res.status(500).json({message: "Failed to make GET call.", error.message})
+        res.status(500).json({message: "Failed to make GET call.", error: error.message})
     }
 })
 
@@ -333,11 +333,11 @@ app.get('/homeAppliances', async (req, res) => {
         if(homeAppliances.length !== 0){
             res.json(homeAppliances)
         } else {
-            res.status(404).json({message: "Home appliances not found", error.message})
+            res.status(404).json({message: "Home appliances not found", error: error.message})
         }
 
     } catch (error) {
-        res.status(500).json({message: "Failed to make GET call.", error.message})
+        res.status(500).json({message: "Failed to make GET call.", error: error.message})
     }
 })
 
