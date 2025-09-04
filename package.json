@@ -3,11 +3,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-<<<<<<< HEAD
-    "mongoose": "^8.18.0"
-=======
     "mongoose": "^8.17.2"
->>>>>>> 6ecbda46aa2fd909ec89ccb8371d0f93e9d75b60
   },
   "name": "backend",
   "version": "1.0.0",
