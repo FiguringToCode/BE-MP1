@@ -1,5 +1,32 @@
 const mongoose = require('mongoose')
 
+const productSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    },
+    rating: {
+        type: Number,
+        required: true
+    },
+    previousPrice: {
+        type: Number,
+        required: true
+    },
+    discount: {
+        type: String,
+        required: true
+    },
+    productImg: {
+        type: String,
+        required: true
+    },
+})
+
 const CategorySchema = new mongoose.Schema({
     type: {
         type: String,
@@ -8,9 +35,10 @@ const CategorySchema = new mongoose.Schema({
     imgUrl: {
         type: String,
         required: true
-    }
+    },
+    products: [productSchema]
 })
 
-const Categories = mongoose.model("Categories", CategorySchema)
+const Category = mongoose.model("Category", CategorySchema)
 
-module.exports = Categories
+module.exports = Category
